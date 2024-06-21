@@ -12,7 +12,8 @@ def predict():
     data = request.get_json(force=True)
     message = data['message']
     message_transformed = tfidf.transform([message])
-    prediction = model.predict(message_transformed)
+    message_transformed_dense = message_transformed.toarray()  # Convert to dense format
+    prediction = model.predict(message_transformed_dense)
     return jsonify({'prediction': 'spam' if prediction[0] == 1 else 'ham'})
 
 if __name__ == '__main__':
