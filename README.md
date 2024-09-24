@@ -1,5 +1,5 @@
 # Afame Technologies - Spam SMS Detection
-
+# Inbox Defender
 This repository contains the code and resources for the Spam SMS Detection project. The project aims to build a machine learning model that can classify SMS messages as spam or legitimate.
 
 ## Project Structure
